@@ -1,5 +1,7 @@
 import React  from 'react'
 import './component.css'
+import { Link} from 'react-router-dom'
+
 export default function Home() {
 
 
@@ -7,7 +9,7 @@ export default function Home() {
         <>
         <div id='home-div'>
             <h1 className='white-text'>Quiz App</h1>
-            <button id='play-button'>Play</button>
+           <Link to='/quiz' id='play-button' >Play </Link>
         </div>
         </>
     )

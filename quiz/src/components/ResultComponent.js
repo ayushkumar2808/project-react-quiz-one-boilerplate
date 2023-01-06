@@ -1,8 +1,13 @@
 import React  from 'react'
 import './component.css'
+import { Link } from 'react-router-dom'
 
-export default function Result() {
 
+export default function Result(props) {
+    
+
+ 
+    
 
     return(
         <>
@@ -20,19 +25,20 @@ export default function Result() {
                 </div>
                 <div id='numbers'>
                    <h3>15</h3>
-                   <h3>9</h3>
-                   <h3>3</h3>
-                   <h3>6</h3>
+                   <h3>{props.attempted}</h3>
+                   <h3>{props.correct}</h3>
+                   <h3>{15-props.correct}</h3>
                 </div>
             </div>
            
         </div>
         <div>
-                <button style={{marginRight:"2vh"}}>Play Again</button>
-                <button>Back to home</button>
+                <button style={{marginRight:"2vh"}}> <Link to='/quiz' >Play Again</Link> </button>
+                <button  ><Link to='/'  >Back to home</Link> </button>
             </div>
             </div>
         </>
     )
+    
 
 }
